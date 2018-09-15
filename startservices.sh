@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [[ -z "$SERVER_NAME" ]]; then export SERVER_NAME=steemitdev.com; fi
+if [[ -z "$SERVER_NAME" ]]; then export SERVER_NAME=dsite.io; fi
 
-if [[ -z "$WSPA_SERVER" ]]; then export WSPA_SERVER=steemd.steemitdev.com; fi
+if [[ -z "$WSPA_SERVER" ]]; then export WSPA_SERVER=dpayd.dpays.io; fi
 
 # generate nginx config on the fly and feed in any appropriate environment variables
 if [[ "$NO_ROBOTS" ]]; then
