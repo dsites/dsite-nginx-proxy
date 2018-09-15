@@ -37,45 +37,11 @@ server {
       proxy_read_timeout 90;
       proxy_http_version 1.1;
       proxy_redirect off;
-      proxy_pass  http://steemit-sdc:8080/.well-known/healthcheck.json;
+      proxy_pass  http://127.0.0.1:8080/.well-known/healthcheck.json;
     }
 
     add_header Strict-Transport-Security "max-age=31557600; includeSubDomains; preload" always;
 
-    location /cryptocurrency/@bitcoinminer25/youhash-cloud-mining-scam-or-legit {
-        access_log off;
-        return 403;
-    }
-    
-    location /flstudio/@cracked-games/ltxziiz9 {
-        access_log off;
-        return 403;
-    }
-    
-    location /music/@jneelocamacho/how-to-download-free-fl-studio-mobile {
-        access_log off;
-        return 403;
-    }
-
-    location /music/@therealtblgk/fl-studio-12-4-2-digital-download-for-windows-first-3-to-comment-will-get-a-free-copy {
-        access_log off;
-        return 403;
-    }
-
-    location /music/@therealtblgk/fl-studio-12-4-2-for-1-sbd {
-        access_log off;
-        return 403;
-    }
-    
-    location /fullmovie/@marvinlox/baaghi-2-hindi-2018-full-movie-in-720p-hd-dvdrip-bluerayrip {
-        access_log off;
-        return 403;
-    }
-    
-    location ~ /@unicef(/|$) {
-        access_log off;
-        return 403;
-    }
     
     location / {
       limit_req zone=sdc burst=50;
@@ -103,7 +69,7 @@ server {
       proxy_cache_lock_age 5m;
       proxy_cache_lock_timeout 5m;
 
-      proxy_pass  http://steemit-sdc:8080;
+      proxy_pass  http://127.0.0.1:8080;
 
     }
 }
